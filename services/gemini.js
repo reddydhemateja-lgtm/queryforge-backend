@@ -7,7 +7,7 @@ const groq = new Groq({
 async function askGemini(prompt) {
   const result = await groq.chat.completions.create({
     messages: [{ role: 'user', content: prompt }],
-    model: 'llama3-8b-8192',
+    model: 'llama-3.3-70b-versatile',
     max_tokens: 1000,
   });
   const text = result.choices[0]?.message?.content || '';
